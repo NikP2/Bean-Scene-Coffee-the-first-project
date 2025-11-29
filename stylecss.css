@@ -1,0 +1,328 @@
+:root {
+  --font-clicker-script: "Clicker Script";
+  --light-color: white;
+  --font-size-14: 14px;
+  --color-black: #1e1e1e;
+  
+  --btn-background: #f9c06a;
+  --btn-radius: 24px;
+  --btn-paddings: 14px 26px;
+  --btn-font-width: bold;
+
+  --text-color-coffee: #603809;
+  --text-color-grey: #707070;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #FFFEFC;
+}
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header {
+  background-image: url(img/coffee_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.dark-heading {
+    color: var(--text-color-coffee);
+    font-weight: var(--btn-font-width);
+    font-size: 54px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.container { 
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 21px;
+}
+
+.logo {
+    font-family: var(--font-clicker-script);
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-right: 245px;
+}
+
+header a {
+    color: var(--light-color);
+}
+
+header ul {
+    display: inline-block;
+}
+
+header ul li{
+    display: inline-block;
+    margin-right: 60px;
+
+}
+
+header ul li:last-child{
+    margin-right: 0px;
+}
+
+header ul li a{
+    color: var(--light-color);
+    font-size: var(--font-size-14);
+}
+
+
+header .login {
+    display: inline-block;
+    margin-left: 189px;
+}
+
+header nav {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.btn-sign-in {
+    color: var(--light-color);
+    text-decoration: underline;
+    font-size: var(--font-size-14);
+}
+
+
+.btn {
+  color: var(--color-black);
+  background-color: var(--btn-background);
+  border-radius: var(--btn-radius);
+  padding: var(--btn-paddings);
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: var(--btn-font-width);
+  font-size: 14px;
+}
+
+header ul a:hover,
+.btn-sign-in:hover {
+  opacity: 0.8;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px 2px #666;
+}
+
+.btn-sign-up{
+    margin-left: 35px;
+}
+
+
+.hero {
+    color: var(--light-color);
+    margin-top: 116px;
+    width: 527px;
+}
+
+.lable {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.hero .title {
+    font-size: 220px;
+    font-family: var(--font-clicker-script);
+    font-weight: 400;
+}
+
+.hero .description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.order-btn {
+    width: 134px;
+    text-align: center;
+    height: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 93px;
+}
+
+.discription {
+    display: inline-block;
+    margin-right: 80px;
+    width: 585px;
+    vertical-align: 60px;
+}
+
+.discription h2 {
+    margin-bottom: 29px;
+}
+
+.discription p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    color: var(--text-color-grey);
+    margin-bottom: 29px;
+}
+
+
+.advantages {
+  padding-bottom: 130px;
+  padding-top: 80px;
+}
+
+.products h2 {
+  text-align: center;
+}
+
+.products p {
+  color: var(--text-color-grey);
+  text-align: center;
+  margin: 16px 0 32px 0;
+  font-size: 20px;
+}
+
+
+.products .card {
+  display: inline-block;
+  text-align: center;
+  margin-right: 14px;
+  
+}
+
+.products .card:last-child {
+  margin-right: 0;
+}
+
+.products .card-back > * {
+  display: block;
+}
+
+
+.products .type {
+  color: var(--text-color-coffee);
+  font-weight: var(--btn-font-width);
+  font-size: 22px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  padding: 10px;
+}
+
+.products .charachteristics {
+  color: var(--color-black);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 6px;
+}
+
+.products .price {
+  color: var(--text-color-coffee);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.card-back {
+  width: 280px;
+  border-right: 1px solid rgba(249, 193, 108, 30%);
+  border-left: 1px solid rgba(249, 193, 108, 30%);
+  border-bottom: 1px solid rgba(249, 193, 108, 30%);
+  background-color: rgba(249, 193, 108, 10%);
+  margin-top: -20px;
+}
+
+.products .btn {
+  position: relative;
+  display: inline-block;
+  width: 134px;
+  top: 20px;
+}
+
+.different {
+  text-align: center;
+  margin-top: 82px;
+}
+
+.different .description {
+  margin: 16px 0 32px 0;
+}
+
+
+.different .card {
+  display: inline-block;
+  padding: 36px 39px;
+  text-align: center;
+  width: 280px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 16px;
+}
+
+.different .card:last-child {
+  margin-right: 0px;
+}
+
+
+.different .card > * {
+  display: block;
+}
+
+.different .card img {
+  display: inline-block;
+}
+
+.different .different-name {
+  color: var(--text-color-coffee);
+  font-size: 26px;
+  font-style: bold;
+  font-weight: 700;
+  margin: 25px 0 8px 0;
+}
+
+.different .card > p {
+  color: var(--text-color-grey);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.different .card:hover {
+  background-color: #ffeed8;
+  transform: scale(1.1);
+}
+
+.joinus {
+  margin: 32px;
+}
+.joinus p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-color-grey);
+}
+
+.joinus h3 {
+  font-size: 30px;
+  font-weight: 700;
+  font-weight: 166px;
+  color: var(--text-color-coffee);
+}
+
+.different .btn {
+  margin-bottom: 82px;
+}
+
+.different .card-back {
+  border-top: 1px solid rgba(249, 193, 108, 30%);
+}
+
+
+
