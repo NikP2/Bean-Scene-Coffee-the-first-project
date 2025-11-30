@@ -325,4 +325,31 @@ header ul a:hover,
 }
 
 
+.offer {
+  background-image: url(img/Group\ 36.png);
+  padding: 135px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.offer h2 {
+  font-weight: 700;
+  font-size: 54px;
+  font-style: bold;
+  margin-bottom: 22px;
+  color: #FFFFFF;    
+}
+
+.offer p {
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 22px;
+}
+
+.amazing {
+  width: 575px;
+  margin-top: 135px;
+}
 
