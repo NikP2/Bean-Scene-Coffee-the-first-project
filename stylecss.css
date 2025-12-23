@@ -382,6 +382,7 @@ header ul a:hover,
   color: var(--text-color-coffee);
   font-weight: 700;
   font-size: 32px;
+  margin-bottom: 4px;
 }
 .slide {
   background-color: #f7f0e8;
@@ -396,12 +397,28 @@ header ul a:hover,
   padding-block: 57px;
 }
 
-.slider {
-  /* border: 3px solid green; */
-}
-
 .quote {
   position: absolute;
   top: 60px;
   left: 29px;
+}
+
+.status {
+  color: var(--text-color-grey);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.slide .avatar {
+  border-radius: 16px;
+  width: 83px;
+  height: 83px;
+  background-image: url(img/man.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  margin: 0 auto;
 }
