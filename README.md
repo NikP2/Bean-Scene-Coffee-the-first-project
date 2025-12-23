@@ -1,1 +1,0 @@
-# Bean-Scene-Coffee-the-first-project

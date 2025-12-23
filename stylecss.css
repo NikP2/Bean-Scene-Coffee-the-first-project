@@ -316,20 +316,18 @@ header ul a:hover,
   color: var(--text-color-coffee);
 }
 
-.different .btn {
-  margin-bottom: 82px;
-}
-
 .different .card-back {
   border-top: 1px solid rgba(249, 193, 108, 30%);
 }
 
 
 .offer {
-  background-image: url(img/Group\ 36.png);
+  background-image: url(img/cup.png), url(img/coffee_bean.png), url(img/Group\ 36.png);
   padding: 135px 0;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 300px 467px, 550px 100%, cover;
+  background-position: 88%, right, 0;
+  margin: 85px 0;
 }
 
 .offer h2 {
@@ -353,3 +351,57 @@ header ul a:hover,
   margin-top: 135px;
 }
 
+/* new section Feedback */
+
+.feedback {
+  margin-block: 82px;
+  text-align: center;
+}
+
+.feedback h2 {
+  text-align: center;
+}
+
+.feedback .description {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--text-color-grey);
+  font-size: 20px;
+}
+
+.feedback .slide p {
+  text-align: center;
+  line-height: 36px;
+  color: var(--text-color-grey);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 13px;
+}
+
+.slide h3 {
+  color: var(--text-color-coffee);
+  font-weight: 700;
+  font-size: 32px;
+}
+.slide {
+  background-color: #f7f0e8;
+  border: 1px solid #F9C06A6B;
+  padding: 140px 100px 17.5px;
+  position: relative;
+}
+
+.slider-wrapper {
+  border: 2px solid yellow;
+  padding-inline: 41px;
+  padding-block: 57px;
+}
+
+.slider {
+  /* border: 3px solid green; */
+}
+
+.quote {
+  position: absolute;
+  top: 60px;
+  left: 29px;
+}
