@@ -1,120 +1,159 @@
-body * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 .container {
-    /* border: 2px solid red; */
-    max-width: 700px;
-    padding: 20px 25px;
-    margin: 0 auto;
-    background-color: #F3AAAD;
+    /* border: 1px solid red; */
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 
-header {
+body {background-color: #333;}
+
+.controls-slides {
+    display: none;
+}
+
+#control-1:checked ~ .arrows .controls-slide1 {
+    display: block;
+}
+
+#control-2:checked ~ .arrows .controls-slide2 {
+    display: block;
+}
+#control-3:checked ~ .arrows .controls-slide3 {
+    display: block;
+}
+#control-4:checked ~ .arrows .controls-slide4 {
+    display: block;
+}
+
+input {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+input::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #efefef;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+input:checked {
+    background-color: #efefef;
+}
+
+#control-1 {
+    left: 45%;
+}
+#control-2 {
+    left: 49%
+}
+#control-3 {
+    left: 53%;
+}
+#control-4 {
+    left: 57%;
+}
+
+.slides {
+    height: inherit; /* Унаследовать*/
+    width: 3200px;
+    transition: all 1s ease-in-out;
+}
+
+.slide {
     display: inline-block;
-    width: 650px;
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #FFFFFF;
-    background-color:#9AD0C7;
+    height: inherit; /* Унаследовать*/
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+    background-size: 100%;
+    width: 800px;
+    margin-right: -4px;
 }
 
-aside {
-    display: inline-block;
-    height: 350px;
-    width: 150px;
-    color: #FFFFFF;
-    text-align: center;
-    background-color: #62B7B5;
+
+.slide-1 {
+    background-image: url(https://preview.redd.it/whats-the-greatest-your-favorite-mac-wallpaper-of-all-time-v0-70pl0q2hv66d1.jpeg?auto=webp&s=07466255de47a595499c421ebc49e884e1c4f6a7);
+}
+.slide-2 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg1BOkVjXVN6bBKMT7MAOV9lKLXqJLSE_f8Q&s);
+}
+.slide-3 {
+    background-image: url(https://avatars.mds.yandex.net/i?id=38c36cdb8876e7ed18c39d8abee333b66212f74d-7132066-images-thumbs&n=13);
 }
 
-aside > h1 {
-    margin-top: 150px;
+.slide-4 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfRlzG0ZD92p2uRFl6oomp_YEUFJBgYq8zCg&s);
 }
 
-article {
-    display: inline-block;
-    text-align: center;
-    height: 350px;
-    width: 470px;
-    margin-left: 20px;
-    vertical-align: top;
-    background-color: #FA7B7A;
+#control-1 {
+    transition: all 0.3s ease-in-out;
+}
+#control-2 {
+    transition: all 0.3s ease-in-out;
+}
+#control-3 {
+    transition: all 0.3s ease-in-out;
+}
+#control-4 {
+    transition: all 0.3s ease-in-out;
 }
 
-ul {
-    display: inline-block;
-    text-align: center;
-    margin-top: 20px;
+#control-1:checked ~ .slides {
+    transform: translateX(0px);
 }
+#control-2:checked ~ .slides {
+    transform: translateX(-25%);
+}
+#control-3:checked ~ .slides {
+    transform: translateX(-50%);
+} 
+#control-4:checked ~ .slides {
+    transform: translateX(-75%);
+} 
 
-li {
-    display: inline-block;
-    font-size: 10px;
-}
-
-a {
-    border-right: 1px solid darkgrey;
-    border: 1px solid darkgrey;
-    margin: -3px;
-    padding: 8px;
-    background-color: white;
-    color: grey;
-    transition: all 0.3s ease-in;
-}
-
-a:hover {
-    background-color: darkgrey;
-    color: black;
-}
-
-li:last-child a {
-    border-right: 0px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-li:first-child a {
-    border-right: 0px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-article h1 {
+.arrow {
     color: white;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    cursor: pointer;
+    transition: 0.7s;
 }
 
-.item {
-    display: inline-block;
-    width: 140px;
-    height: 140px;
-    color: white;
-    background-color: #D5D5D5;
-    margin-right: 10px;
+
+.arrow-right {
+    right: 22px;
+    transform-origin: left 50px;
+}
+.arrow-left {
+    left: 22px;
+    transform-origin: right 50px;
 }
 
-.item:last-child {
-    margin-right: 0;
+.arrow:hover {
+    transform: scale(1.5);
+    color: rgb(236, 223, 172);
 }
 
-span {
-    display: inline-block;
-    margin-top: 55px;
-    font-size: 30px;
-}
-
-footer {
-    padding: 10px;
-    text-align: center;
-    color: white;
-    margin-top: 30px;
-    background-color: #99D1C7;
+.arrow-right:checked .slides {
+    transform: translateX(-25%);
 }
