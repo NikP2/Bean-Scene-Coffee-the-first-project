@@ -20,6 +20,33 @@ body {
     overflow: hidden;
 }
 
+.controls-slides{
+    display: none;
+}
+
+#check-1:checked ~ .arrows .controls-slide1 {
+    display: block;
+}
+
+#check-2:checked ~ .arrows .controls-slide2 {
+    display: block;
+}
+
+#check-3:checked ~ .arrows .controls-slide3 {
+    display: block;
+}
+
+#check-4:checked ~ .arrows .controls-slide4 {
+    display: block;
+}
+
+#check-5:checked ~ .arrows .controls-slide5 {
+    display: block;
+}
+
+
+
+
 .slides {
     height: inherit;
     width: 4000px;
@@ -310,9 +337,9 @@ input:checked {
 .arrow-right {
     background-color: rgba(255, 255, 255, 0.3);
     padding: 5px;
-    right: 20px;
-    transform-origin: left 50px;
     border-radius: 5px;
+    right: 22px;
+    transform-origin: left 50px;
 }
 
 .arrow-left {
@@ -323,4 +350,12 @@ input:checked {
     border-radius: 5px;
 }
 
+.arrow:hover {
+    color: black;
+    background-color: (255, 255, 255, 1);
+}
 
+
+.arrow-right:checked .slides {
+    transform: translateX(-25%);
+}

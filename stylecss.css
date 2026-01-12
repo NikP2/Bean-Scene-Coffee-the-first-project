@@ -351,7 +351,7 @@ header ul a:hover,
   margin-top: 135px;
 }
 
-/* new section Feedback */
+/* new section Feedback SLIDER */
 
 .feedback {
   margin-block: 82px;
@@ -421,4 +421,36 @@ header ul a:hover,
   background-repeat: no-repeat;
   background-position: 0px;
   margin: 0 auto;
+}
+
+.feedback .controls input {
+  appearance: none; /*Отключаем отображение кнопок*/
+  contain: content;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 6px solid var(--text-color-coffee);
+  margin-right: 11px;
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback .controls input:last-child {
+  margin-right: 0;
+}
+
+.feedback .controls input::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2.1px;
+  width: 19px;
+  height: 19px;
+  background-color: var(--text-color-coffee);
+  border-radius: 50%;
+  display: none;
+}
+
+.feedback .controls input:checked::after {
+  display: block;
 }
