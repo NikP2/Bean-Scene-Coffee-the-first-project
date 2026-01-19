@@ -385,16 +385,25 @@ header ul a:hover,
   margin-bottom: 4px;
 }
 .slide {
+  display: inline-block;
   background-color: #f7f0e8;
   border: 1px solid #F9C06A6B;
   padding: 140px 100px 17.5px;
   position: relative;
+  border: 2px solid red;
+  width: 980px;
 }
 
 .slider-wrapper {
-  border: 2px solid yellow;
+  border: 2px solid blue;
   padding-inline: 41px;
   padding-block: 57px;
+}
+
+
+.slides {
+  /* border: 2px solid purple; */
+  width: 2950px;
 }
 
 .quote {
