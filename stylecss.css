@@ -384,26 +384,30 @@ header ul a:hover,
   font-size: 32px;
   margin-bottom: 4px;
 }
+.slides {
+  width: 2950px;
+  transition: 0.5s;
+}
+.slider {
+  overflow: hidden;
+  width: 980px;
+  margin: 0 auto;
+}
 .slide {
   display: inline-block;
   background-color: #f7f0e8;
   border: 1px solid #F9C06A6B;
   padding: 140px 100px 17.5px;
   position: relative;
-  border: 2px solid red;
   width: 980px;
+  height: 524px;
+  vertical-align: top;
 }
 
 .slider-wrapper {
-  border: 2px solid blue;
   padding-inline: 41px;
   padding-block: 57px;
-}
-
-
-.slides {
-  /* border: 2px solid purple; */
-  width: 2950px;
+  position: relative;
 }
 
 .quote {
@@ -432,6 +436,14 @@ header ul a:hover,
   margin: 0 auto;
 }
 
+
+.feedback .controls {
+  position: absolute;
+  bottom: 0;
+  left: 500px;
+}
+
+
 .feedback .controls input {
   appearance: none; /*Отключаем отображение кнопок*/
   contain: content;
@@ -452,7 +464,7 @@ header ul a:hover,
   content: "";
   position: absolute;
   top: 2px;
-  left: 2.1px;
+  left: 2.7px;
   width: 19px;
   height: 19px;
   background-color: var(--text-color-coffee);
@@ -463,3 +475,95 @@ header ul a:hover,
 .feedback .controls input:checked::after {
   display: block;
 }
+
+.controls:has(#control1:checked) + .slider .slides{
+  transform: translateX(0px);
+}
+
+.controls:has(#control2:checked) + .slider .slides {
+  transform: translateX(-980px);
+}
+
+.controls:has(#control3:checked) + .slider .slides {
+  transform: translateX(-1960px);
+}
+
+.arrows-box {
+  display: none;
+  position: relative;
+  transition: 0.5s;
+}
+
+.controls:has(#control1:checked) ~ .arrows .arrows-slide1, 
+.controls:has(#control2:checked) ~ .arrows .arrows-slide2, 
+.controls:has(#control3:checked) ~ .arrows .arrows-slide3{
+  display: block;
+}
+
+.arrows {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+}
+
+
+
+.arrows-box label {
+  background-color: var(--btn-background);
+  width: 82px;
+  height: 82px;
+  line-height: 92px;
+  border-radius: 16px;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.arrows-box label:first-child {
+  left: 60px;
+}
+
+.arrows-box label:last-child {
+  right: 60px;
+}
+
+.arrows label:hover {
+  transform: scale(1.2);
+}
+
+/*Или*/
+
+/* .btn-arrow {
+  color: var(--color-black);
+  background-color: var(--btn-background);
+  border-radius: var(--btn-radius);
+  padding: var(--btn-paddings);
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: var(--btn-font-width);
+  font-size: 14px;
+}
+
+.btn-arrow-left {
+  padding: 29px;
+  position: absolute;
+  bottom: 40%;
+  left: 60px;
+  transform: translateY(-45%);
+}
+
+.btn-arrow-right {
+  padding: 29px;
+  position: absolute;
+  bottom: 40%;
+  right: 60px;
+  transform: translateY(-50%);
+}
+
+.btn-arrow:hover {
+  box-shadow: 0 0 10px 2px #666;
+  background-color: #f5b34f;
+} */
+
