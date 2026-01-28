@@ -3,56 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <input type="radio" name="control" id="control-1" checked>
-        <input type="radio" name="control" id="control-2">
-        <input type="radio" name="control" id="control-3">
-        <input type="radio" name="control" id="control-4">
-        <div class="slides">
-            <div class="slide slide-1"></div>
-            <div class="slide slide-2"></div>
-            <div class="slide slide-3"></div>
-            <div class="slide slide-4"></div>
-        </div>
-        <div class="arrows">
-            <div class="controls-slides  controls-slide1">
-                <label for="control-4">
-                    <i class="arrow arrow-left fa-solid fa-left-long"></i>
-                </label>
-                <label for="control-2">
-                    <i class="arrow arrow-right fa-solid fa-right-long"></i>
-                </label>
+    <section>
+        <form action="" class="container">
+            <h2>Let's Talk 👋</h2>
+            <p>If you have any question or issue's to use our product. Fill the form below. We'll help you.</p>
+            <div class="form">
+                <div class="name">
+                    <label for="name">Your name<sup>*</sup></label>
+                    <input type="text" placeholder="Enter your name" id="name" name="name" required>
+                </div>
+                <div class="email">
+                    <label for="email">Your email<sup>*</sup></label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="topic">
+                    <label for="select">Choose topic<sup>*</sup></label>
+                    <select name="select" id="select" aria-placeholder="Select one topic" required>
+                        <option value="" disabled selected>Select one topic</option>
+                        <option value="Music">Music</option>
+                        <option value="Art">Art</option>
+                        <option value="Proga">Programming</option>
+                    </select>
+                </div>
+                <div class="message">
+                    <label for="message">Message<sup>*</sup></label>
+                    <textarea name="message" id="message" required placeholder="Write your message" cols="33px" rows="5px"></textarea>
+                </div>
+                <input class="btn" type="submit" value="Contact us">
             </div>
-            <div class="controls-slides  controls-slide2">
-                <label for="control-1">
-                    <i class="arrow arrow-left fa-solid fa-left-long"></i>
-                </label>
-                <label for="control-3">
-                    <i class="arrow arrow-right fa-solid fa-right-long"></i>
-                </label>
-            </div>
-            <div class="controls-slides  controls-slide3">
-                <label for="control-2">
-                    <i class="arrow arrow-left fa-solid fa-left-long"></i>
-                </label>
-                <label for="control-4">
-                    <i class="arrow arrow-right fa-solid fa-right-long"></i>
-                </label>
-            </div>
-            <div class="controls-slides controls-slide4">
-                <label for="control-3">
-                    <i class="arrow arrow-left fa-solid fa-left-long"></i>
-                </label>
-                <label for="control-1">
-                    <i class="arrow arrow-right fa-solid fa-right-long"></i>
-                </label>
-            </div>
-        </div>
-    </div>
+        </form>
+    </section>
 </body>
 </html>
