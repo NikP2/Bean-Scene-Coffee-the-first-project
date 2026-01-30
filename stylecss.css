@@ -14,12 +14,12 @@
 }
 
 body {
-  font-family: "Playfair Display", serif;
   background-color: #FFFEFC;
 }
 
 body,
 * {
+  font-family: "Playfair Display", serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -570,17 +570,16 @@ header ul a:hover,
 /*Suscribe Section!!!*/
 
 .information {
-  background-image: url(img/Group\ 36.png);
-  padding: 135px 0;
+  background-image: linear-gradient(#603709d2), url(img/BK.png);
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 135px 0;
   margin-top: 83px;
   background-position: 88%, right, 0;
+  position: relative;
 }
 
 .suscribe {
-  position: relative;
-  border:1px solid red;
   text-align: center;
 }
 
@@ -600,35 +599,74 @@ header ul a:hover,
   margin-bottom: 26px;
 }
 
-.suscribe #email {
+.suscribe input[type="email"] {
   width: 505px;
   height: 66px;
   border-radius: 4px;
+  font-size: 20px;
   border: 1px solid rgba(249, 192, 106, 42%);
-  padding: 20px;
+  padding: 20px 0 19px 26px;
+  outline: none;
 }
 
-.suscribe .submit {
-  width: 137px;
-  height: 66px;
-  font-family: Playfair Display;
+.suscribe input[type="email"]:focus {
+  outline: 1px solid #f9c06a75;;
+}
+
+.suscribe input[type="submit"]{
   background-color: #f9c06a;
   border-radius: 4px;
-  border: 0px;
-  font-weight: 700;
-  font-style: bold;
+  border: none;
+  font-weight: bold;
+  height: 66px;
   font-size: 22px;
-  padding: 20px;
+  padding: 19px 24px 18px 24px;
   margin-left: -8px;
   color: var(--text-color-coffee);
+  vertical-align: bottom;
+  cursor: pointer;
 }
 
-.ser {
+.suscribe .sumbit:hover {
+  box-shadow: 0 0 10px 2px #666;
+}
+
+form {
   display: inline-block;
-  border: 2px solid green;
-  width: 652px;
 }
 
-.ser input {
+form input {
   vertical-align: middle;
 }
+
+.information img {
+  position: absolute;
+  top: 138px;
+}
+
+.information .left-cup {
+  left: -260px;
+}
+
+.information .right-cup {
+  transform: scaleX(-1);
+  right: -260px;
+}
+
+/* Footer !!! */
+
+footer {
+  background-color: #442808;
+  position: relative;
+  color: #fff;
+}
+
+/* footer .background-image {
+  position: absolute;
+  bottom: 100px;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+} */
