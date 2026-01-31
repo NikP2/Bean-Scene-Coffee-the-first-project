@@ -27,7 +27,7 @@ body,
 }
 
 header {
-  background-image: url(img/coffee_image.png);
+  background-image: linear-gradient(#1e1e1e59), url(img/coffee_image.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -148,7 +148,6 @@ header ul a:hover,
 .order-btn {
     width: 134px;
     text-align: center;
-    height: 48px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 93px;
@@ -642,6 +641,7 @@ form input {
 .information img {
   position: absolute;
   top: 138px;
+  z-index: 1;
 }
 
 .information .left-cup {
@@ -656,17 +656,124 @@ form input {
 /* Footer !!! */
 
 footer {
-  background-color: #442808;
-  position: relative;
+  background:#442808;
   color: #fff;
+  padding-top: 162px;
+  padding-bottom: 80px;
+  position: relative;
 }
 
-/* footer .background-image {
-  position: absolute;
-  bottom: 100px;
-  z-index: 2;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-} */
+footer a {
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+
+footer .container {
+    position: relative;
+    z-index: 2;
+  }
+footer .contacts, footer nav, footer nav ul {
+  display: inline-block;
+}
+
+
+footer .contacts {
+  width: 380px;
+}
+
+footer .contacts .logo {
+  font-size: 54px;
+  font-family: var(--font-clicker-script);
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+footer .contacts p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-block: 20px;
+}
+
+
+footer .socials {
+  margin-right: 20px;
+  vertical-align: bottom;
+}
+
+footer .socials a:last-child {
+  margin-right: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-right: 66px;
+}
+
+footer ul li:first-child {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 55px;
+  line-height: 0;
+}
+
+footer ul li {
+  font-size: 18px;
+  line-height: 42px;
+}
+
+footer ul:last-child {
+  width: 332px;
+  margin-right: 0;
+  vertical-align: top;
+}
+
+footer ul:last-child  li:first-child {
+  margin-bottom: 50px;
+}
+
+footer ul:last-child  li:nth-child(2) {
+  line-height: normal;
+}
+
+footer nav {
+  margin-left: 45px;
+}
+
+.socials3 {
+  padding-bottom: 2px;
+}
+
+.socials4 {
+  padding-bottom: 2px;
+}
+
+footer li {
+  transition: 0.3s ease-in-out;
+}
+
+footer li:hover {
+  transform: scale(1.1);
+}
+
+footer a:hover {
+  color: var(--btn-background);
+}
+
+footer li:first-child:hover {
+  transform: none;
+}
+
+footer ul:nth-child(3) li:nth-child(2):hover {
+  transform: none;
+}
+
+a img {
+  transition: 0.3s ease-in-out;
+}
+
+a img:hover {
+  transform: scale(1.3);
+}
